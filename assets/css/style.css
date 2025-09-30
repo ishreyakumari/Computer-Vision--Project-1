@@ -1,0 +1,328 @@
+/* Modern CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #555;
+    margin: 1.5rem 0 1rem 0;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    text-align: justify;
+}
+
+/* Images and Figures */
+figure {
+    margin: 2rem 0;
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+}
+
+figure img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Audio Controls */
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 25px;
+    background: #f8f9fa;
+    padding: 0.5rem;
+}
+
+/* Cards and Content Sections */
+.content-section {
+    background: linear-gradient(145deg, #f0f2ff, #e6e9ff);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.method-card {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #764ba2;
+    transition: transform 0.3s ease;
+}
+
+.method-card:hover {
+    transform: translateX(10px);
+}
+
+/* Lists */
+ol, ul {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.question {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.question p {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.question label {
+    display: block;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.question label:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.question input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Result Messages */
+.result {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.result.correct {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.result.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 20px;
+    margin: 2rem 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Demo Controls */
+.demo-controls {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.demo-controls button {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    main {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    figure img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+}

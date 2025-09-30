@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Detection and Removal - Methods</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="methods.html">🔬 Methods</a>
+      <a href="demo.html">🎮 Demo</a>
+      <a href="quiz.html">📝 Quiz</a>
+      <a href="bibliography.html">📚 Bibliography</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>🔬 Shadow Detection Methods</h1>
+    <p>Comprehensive overview of state-of-the-art techniques for shadow detection and removal in digital images.</p>
+
+    <audio controls src="assets/audio/sample.mp3" title="Methods Overview Audio"></audio>
+
+    <figure>
+      <img src="assets/images/methods.png" alt="Flowchart showing the complete shadow detection and removal pipeline" />
+      <figcaption>Complete Shadow Detection and Removal Pipeline (Source: Created by Author)</figcaption>
+    </figure>
+
+    <div class="content-section">
+      <h2>🎨 Color Space-Based Methods</h2>
+      
+      <div class="method-card">
+        <h3>HSV Color Space Analysis</h3>
+        <p><strong>Principle:</strong> Shadows typically have lower value (brightness) but maintain similar hue and saturation to the original surface.</p>
+        <p><strong>Algorithm:</strong></p>
+        <ol>
+          <li>Convert RGB image to HSV color space</li>
+          <li>Analyze the Value (V) channel for intensity variations</li>
+          <li>Apply adaptive thresholding on the V channel</li>
+          <li>Use morphological operations to refine shadow boundaries</li>
+        </ol>
+        <p><strong>Advantages:</strong> Robust to illumination changes, computationally efficient</p>
+        <p><strong>Limitations:</strong> May struggle with colored shadows or complex lighting conditions</p>
+      </div>
+
+      <div class="method-card">
+        <h3>LAB Color Space Method</h3>
+        <p><strong>Principle:</strong> Separates luminance (L) from chromatic information (a, b channels), making shadow detection more reliable.</p>
+        <p><strong>Algorithm:</strong></p>
+        <ol>
+          <li>Convert RGB to LAB color space</li>
+          <li>Focus on L-channel for luminance analysis</li>
+          <li>Calculate local statistical measures (mean, variance)</li>
+          <li>Apply region growing techniques for shadow segmentation</li>
+        </ol>
+        <p><strong>Advantages:</strong> Better separation of luminance and chrominance, perceptually uniform</p>
+        <p><strong>Limitations:</strong> More computationally intensive than HSV method</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>🔍 Morphological and Structural Methods</h2>
+      
+      <div class="method-card">
+        <h3>Morphological Filtering</h3>
+        <p><strong>Principle:</strong> Uses mathematical morphology to identify shadow shapes and boundaries.</p>
+        <p><strong>Key Operations:</strong></p>
+        <ul>
+          <li><strong>Erosion:</strong> Removes small noise and thin connections</li>
+          <li><strong>Dilation:</strong> Expands shadow regions to fill gaps</li>
+          <li><strong>Opening:</strong> Combines erosion followed by dilation</li>
+          <li><strong>Closing:</strong> Combines dilation followed by erosion</li>
+        </ul>
+        <p><strong>Applications:</strong> Post-processing refinement, noise removal, boundary smoothing</p>
+      </div>
+
+      <div class="method-card">
+        <h3>Edge-Based Detection</h3>
+        <p><strong>Principle:</strong> Shadows create distinctive edge patterns that can be detected and analyzed.</p>
+        <p><strong>Techniques:</strong></p>
+        <ul>
+          <li>Canny edge detection for shadow boundary identification</li>
+          <li>Sobel operators for gradient analysis</li>
+          <li>Laplacian of Gaussian for blob detection</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>🤖 Machine Learning Approaches</h2>
+      
+      <div class="method-card">
+        <h3>Deep Learning Methods</h3>
+        <p><strong>Convolutional Neural Networks (CNNs):</strong> End-to-end learning for shadow detection and removal.</p>
+        <p><strong>Popular Architectures:</strong></p>
+        <ul>
+          <li><strong>U-Net:</strong> Encoder-decoder architecture for pixel-wise segmentation</li>
+          <li><strong>DeepLab:</strong> Atrous convolution for multi-scale feature extraction</li>
+          <li><strong>Mask R-CNN:</strong> Instance-based shadow detection</li>
+        </ul>
+        <p><strong>Advantages:</strong> High accuracy, handles complex scenarios, learns from data</p>
+        <p><strong>Requirements:</strong> Large datasets, computational resources, training time</p>
+      </div>
+
+      <div class="method-card">
+        <h3>Traditional Machine Learning</h3>
+        <p><strong>Feature Extraction:</strong> Color histograms, texture features, gradient information</p>
+        <p><strong>Classifiers:</strong></p>
+        <ul>
+          <li>Support Vector Machines (SVM)</li>
+          <li>Random Forest</li>
+          <li>K-Nearest Neighbors (K-NN)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>⚡ Performance Comparison</h2>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+          <thead>
+            <tr style="background: #f8f9fa;">
+              <th style="padding: 1rem; border: 1px solid #ddd;">Method</th>
+              <th style="padding: 1rem; border: 1px solid #ddd;">Accuracy</th>
+              <th style="padding: 1rem; border: 1px solid #ddd;">Speed</th>
+              <th style="padding: 1rem; border: 1px solid #ddd;">Complexity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 1rem; border: 1px solid #ddd;">HSV Thresholding</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Medium</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Fast</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Low</td>
+            </tr>
+            <tr style="background: #f8f9fa;">
+              <td style="padding: 1rem; border: 1px solid #ddd;">LAB Color Space</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">High</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Medium</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Medium</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Deep Learning</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Very High</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">Slow</td>
+              <td style="padding: 1rem; border: 1px solid #ddd;">High</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
