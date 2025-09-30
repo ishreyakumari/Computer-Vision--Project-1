@@ -89,17 +89,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Audio controls enhancement
-document.addEventListener('DOMContentLoaded', function() {
-    const audioElements = document.querySelectorAll('audio');
-    audioElements.forEach(audio => {
-        audio.addEventListener('play', function() {
-            // Pause other audio elements when one starts playing
-            audioElements.forEach(otherAudio => {
-                if (otherAudio !== this && !otherAudio.paused) {
-                    otherAudio.pause();
-                }
-            });
-        });
-    });
-});
